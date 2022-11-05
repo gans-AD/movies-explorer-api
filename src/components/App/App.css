@@ -1,3 +1,21 @@
-.App {
-  text-align: center;
+.page {
+  font-family: "Inter", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #202020;
+  min-height: 100vh;
+  padding: 0 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .page {
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .page {
+    padding: 0 10px;
+  }
 }
