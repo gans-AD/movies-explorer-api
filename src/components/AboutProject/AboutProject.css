@@ -1,0 +1,65 @@
+.about-project__title {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -0.04em;
+  padding: 110px 0 23px;
+  margin: 0;
+  border-bottom: 1px solid #dadada;
+}
+
+.two-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 550px));
+  column-gap: 40px;
+  grid-template-rows: auto auto;
+  grid-auto-flow: row;
+}
+
+.two-columns__title {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.04em;
+}
+
+.two-columns__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  width: 100%;
+}
+
+.timeline__duration {
+  background-color: #303030;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.timeline__duration_green{
+  background-color: #3DDC84;
+  color: #000000;
+}
+
+.timeline__description {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #8b8b8b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+  margin-bottom: 110px;
+}
