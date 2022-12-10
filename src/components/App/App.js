@@ -4,6 +4,7 @@ import Promo from "../Promo/Promo"
 import NavTab from "../NavTab/NavTab";
 import AboutProject from "../AboutProject/AboutProject";
 import Description from "../Description/Description";
+import Techs from "../Techs/Techs";
 
 function App() {
   return <div className="page">
@@ -12,7 +13,9 @@ function App() {
     <Description title="О проекте">
       <AboutProject />
     </Description>
-    <Description title="Технологии"></Description>
+    <Description title="Технологии">
+      <Techs/>
+    </Description>
     <Footer/>
     
   </div>;
