@@ -5,6 +5,7 @@ import NavTab from "../NavTab/NavTab";
 import AboutProject from "../AboutProject/AboutProject";
 import Description from "../Description/Description";
 import Techs from "../Techs/Techs";
+import AboutMe from "../AboutMe/AboutMe";
 
 function App() {
   return <div className="page">
@@ -15,6 +16,9 @@ function App() {
     </Description>
     <Description title="Технологии">
       <Techs/>
+    </Description>
+    <Description title="Студент">
+      <AboutMe/>
     </Description>
     <Footer/>
     

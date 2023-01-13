@@ -1,0 +1,37 @@
+.about-me{
+    display: flex;
+    margin: 66px auto 100px;
+}
+
+.about-me__title {
+  font-size: 50px;
+  line-height: 58px;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.about-me__subtitle {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.about-me__text {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #ffffff;
+  max-width: 600px;
+}
+
+.about-me__photo {
+    background-image: url(../../images/student_photo.jpg);
+    height: 327px;
+    width: 270px;
+    border-radius: 10px;
+    background-size: cover;
+    margin: 0 0 0 270px;
+}
