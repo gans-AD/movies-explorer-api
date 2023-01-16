@@ -3,7 +3,7 @@ import "./AboutMe.css";
 function AboutMe() {
   return (
     <article className="about-me">
-      <div>
+      <div className="about-me__info">
         <h2 className="about-me__title">Антон</h2>
         <p className="about-me__subtitle">Фронтенд-разработчик, 30 лет</p>
         <p className="about-me__text">
@@ -16,9 +16,13 @@ function AboutMe() {
           полученные знания позволят мне создавать различные приложения, которые
           будут помогать мне как инженеру и&nbsp;как педагогу.
         </p>
+        <a 
+        className="about-me__link"
+        href="https://github.com/gans-AD?tab=repositories" 
+        target="_blank"
+        rel="noopener noreferrer">Github</a>
       </div>
       <div className="about-me__photo"></div>
-      
     </article>
   );
 }
