@@ -3,9 +3,9 @@
   width: 100%;
 }
 
-.description:nth-child(2n){
-    background-color: #272727;
-    padding: 0 70px;
+.description:nth-child(2n) {
+  background-color: #272727;
+  padding: 0 70px;
 }
 
 .description__title {
@@ -18,3 +18,16 @@
   border-bottom: 1px solid #dadada;
 }
 
+@media screen and (max-width: 768px) {
+  .description__title {
+    padding-top: 90px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .description__title {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 70px 0 28px;
+  }
+}

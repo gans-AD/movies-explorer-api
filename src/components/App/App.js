@@ -6,6 +6,7 @@ import AboutProject from "../AboutProject/AboutProject";
 import Description from "../Description/Description";
 import Techs from "../Techs/Techs";
 import AboutMe from "../AboutMe/AboutMe";
+import Portfolio from "../Portfolio/Portfolio";
 
 function App() {
   return <div className="page">
@@ -20,6 +21,7 @@ function App() {
     <Description title="Студент">
       <AboutMe/>
     </Description>
+    <Portfolio/>
     <Footer/>
     
   </div>;
