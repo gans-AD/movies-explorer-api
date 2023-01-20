@@ -3,11 +3,6 @@
 Представляет из себя сервис, в котором можно найти фильмы по запросу и сохранить в личном кабинете.
 ---
 
-
-Репозиторий фронтенд - https://github.com/gans-AD/movies-explorer-frontend
-Репозиторий бэкенд - https://github.com/gans-AD/movies-explorer-backend
-
-
 ## Применяемые технологии
 
 - [React](https://ru.reactjs.org/)
@@ -22,6 +17,11 @@
 - [Node.js](https://nodejs.org/)
 - фреймворк веб-приложений [Express](https://expressjs.com/)
 - работа с базой данных [MongoDB](https://www.mongodb.com/) с помощью [mongoose](https://mongoosejs.com/) 
+
+## Репозитории
+
+Репозиторий фронтенд - https://github.com/gans-AD/movies-explorer-frontend
+Репозиторий бэкенд - https://github.com/gans-AD/movies-explorer-backend
 
 ## Ссылки на проект
 
