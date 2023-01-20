@@ -3,8 +3,8 @@
 Представляет из себя сервис, в котором можно найти фильмы по запросу и сохранить в личном кабинете.
 ---
 
-Репозиторий фронтенд - https://github.com/gans-AD/movies-explorer-frontend
-Репозиторий бэкенд - https://github.com/gans-AD/movies-explorer-backend
+    Репозиторий фронтенд - https://github.com/gans-AD/movies-explorer-frontend
+    Репозиторий бэкенд - https://github.com/gans-AD/movies-explorer-backend
 
 
 ## Применяемые технологии
