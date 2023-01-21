@@ -44,6 +44,11 @@
   color: #ffffff;
   text-decoration: none;
   margin-top: auto;
+  transition: 0.8s;
+}
+
+.about-me__link:hover {
+  opacity: 0.5;
 }
 
 .about-me__photo {
@@ -56,6 +61,10 @@
 }
 
 @media screen and (max-width: 930px) {
+  .about-me {
+    margin-bottom: 91px;
+  }
+
   .about-me__info {
     max-width: 364px;
     width: 55%;

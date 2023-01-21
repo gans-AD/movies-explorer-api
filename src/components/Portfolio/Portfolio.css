@@ -8,13 +8,14 @@
   font-size: 18px;
   line-height: 20px;
   font-weight: 400;
-  color: #8b8b8b;
+  color: #A0A0A0;
   margin: 0;
 }
 
 .portfolio__list {
   list-style: none;
   padding: 0;
+  margin: 30px 0 0 0;
 }
 
 .portfolio__list-item {
@@ -33,16 +34,49 @@
   color: #ffffff;
   display: flex;
   justify-content: space-between;
-  min-height: 90px;
-  align-items: center;
+  transition: 0.8s;
+}
+
+.portfolio__link:hover {
+  opacity: 0.5;
 }
 
 .portfolio__link-text {
   line-height: 50px;
-  margin: 0;
+  margin: 20px 0 20px 0;
 }
 
 .portfolio__link-icon {
   line-height: 60px;
-  margin: 0;
+  margin: 20px 0 auto 0;
+}
+
+
+@media screen and (max-width: 768px) {
+  .portfolio__link {
+    font-size: 28px;
+  }
+}
+
+/*ширина 430px назначена для правильного отображения на IPhone 12/13 Pro Max*/
+@media screen and (max-width: 430px) {
+  .portfolio__title {
+    font-size: 14px;
+  }
+
+  .portfolio__list {
+    margin-top: 20px;
+  }
+
+  .portfolio__link {
+    font-size: 18px;
+  }
+
+  .portfolio__link-text {
+    line-height: 28px;
+  }
+  
+  .portfolio__link-icon {
+    line-height: 28px;
+  }
 }
