@@ -1,9 +1,11 @@
 .header {
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 74px;
     align-items: center;
-    border: 1px solid red;
+    background-color: #073042;
+    padding: 0 70px 0 70px;
+    box-sizing: border-box;
 }
 
 .header__logo {
@@ -11,4 +13,38 @@
     height: 38px;
     margin-right: auto;
     background-image: url(../../images/header-logo.svg);
+}
+
+.header__reg-button {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    transition: 0.8s;
+}
+
+.header__reg-button:hover {
+    opacity: 0.5;
+}
+
+.header__login-button {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    color: #000000;
+    background-color: #3DDC84;
+    width: 76px;
+    height: 32px;
+    padding: 0;
+    margin-left: 30px;
+    border: none;
+    border-radius: 3px;
+    transition: 0.8s;
+}
+
+.header__login-button:hover {
+    opacity: 0.5;
 }
