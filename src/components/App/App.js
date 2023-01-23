@@ -7,9 +7,11 @@ import Description from "../Description/Description";
 import Techs from "../Techs/Techs";
 import AboutMe from "../AboutMe/AboutMe";
 import Portfolio from "../Portfolio/Portfolio";
+import Header from "../Header/Header";
 
 function App() {
   return <div className="page">
+    <Header/>
     <Promo/>
     <NavTab/>
     <Description title="О проекте">
