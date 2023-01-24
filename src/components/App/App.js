@@ -1,16 +1,27 @@
 import "./App.css";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Footer from "../Footer/Footer.js";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
+import PageNotFound from "../PageNotFound/PageNotFound"
+
 
 function App() {
   return (
-    <div className="page">
-      <Header />
-      <Route path="/" component={Main} /> 
-      <Footer />
+    
+    <div className="page">      
+      <Switch>        
+        <Route exact path="/">
+          <Header />
+          <Main />
+          <Footer />
+        </Route>
+        <Route path="*">
+          <PageNotFound />
+        </Route>
+      </Switch>      
     </div>
+    
   );
 }
 
