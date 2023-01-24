@@ -2,7 +2,7 @@ import "./Techs.css";
 
 function Techs() {
   return (
-    <div className="techs">
+    <div className="techs" id="techs">
       <h2 className="techs__title">7 технологий</h2>
       <p className="techs__text">
         На курсе веб-разработки мы освоили технологии, которые применили в
