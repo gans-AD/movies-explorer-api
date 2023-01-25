@@ -28,3 +28,4 @@
 
 - сервис доступен по адресу - https://api.cinematron.nomoredomains.icu
 - API доступен по адресу - https://api.cinematron.nomoredomains.icu
+- макет доступен по ссылке - https://disk.yandex.ru/d/FSGh0QhAmUZuXA
