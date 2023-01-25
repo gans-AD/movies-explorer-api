@@ -24,8 +24,6 @@ function App() {
         <Route exact path="/">
           <Header />
           <Main />
-          <Preloader
-          />
           <Footer />
         </Route>
         <Route path="/movies" >
@@ -33,16 +31,12 @@ function App() {
           <Movies />
           <Navigation 
           />
-          <Preloader
-          />
           <Footer />
         </Route>
         <Route path="/saved-movies" >
          <Header />
           <SavedMovies />
           <Navigation 
-          />
-          <Preloader
           />
           <Footer />
         </Route>
@@ -52,7 +46,8 @@ function App() {
         <Route path="*">
           <PageNotFound />
         </Route>
-      </Switch>      
+      </Switch>
+      <Preloader />      
     </div>
     
   );
