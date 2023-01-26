@@ -21,7 +21,30 @@
   scale: 1.2;
 }
 
-.header__reg-button {
+.header__link-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  position: absolute;
+  width: calc(100% - 140px);
+}
+
+.header__link {
+  font-size: 13px;
+  line-height: 18px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.header__link_movies {
+  font-weight: 500;
+}
+
+.header__link_saved-movies {
+  font-weight: 400;
+}
+
+.header__reg-btn {
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
@@ -32,16 +55,12 @@
   transition: all 0.8s;
 }
 
-.header__reg-button:hover {
+.header__reg-btn:hover {
   opacity: 0.5;
   scale: 1.1;
 }
 
-.header__reg-button_hidden {
-  visibility: hidden;
-}
-
-.header__login-button {
+.header__login-btn {
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
@@ -56,9 +75,22 @@
   transition: all 0.8s;
 }
 
-.header__login-button:hover {
+.header__login-btn:hover {
   opacity: 0.5;
   scale: 1.1;
+}
+
+.header__profile-btn {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  width: 100px;
+  height: 32px;
+  border-radius: 20px;
+  background-color: #313131;
+  padding: 0;
+  border: none;
+  color: #FFFFFF;
 }
 
 @media screen and (max-width: 768px) {
@@ -72,11 +104,11 @@
     padding: 0 14px 0 14px;
   }
 
-  .header__reg-button {
+  .header__reg-btn {
     font-size: 10px;
   }
 
-  .header__login-button {
+  .header__login-btn {
     font-size: 10px;
     width: 54px;
     height: 26px;

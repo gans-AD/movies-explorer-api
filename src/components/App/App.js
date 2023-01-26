@@ -9,6 +9,7 @@ import Preloader from "../Preloader/Preloader";
 import Movies from "../Movies/Movies";
 import SavedMovies from "../SavedMovies/SavedMovies";
 import Navigation from "../Navigation/Navigation";
+import Profile from "../Profile/Profile";
 
 //const [isPreloadActive, setPreloadActive]=React.useState(false);
 //const [isNavigationOpen, setNavigationOpen]=React.useState(false);
@@ -25,21 +26,26 @@ function App() {
           <Main />
           <Footer />
         </Route>
-        <Route path="/movies">
+        <Route exact path="/movies">
           <Header />
           <Movies />
           <Navigation />
           <Footer />
         </Route>
-        <Route path="/saved-movies">
+        <Route exact path="/saved-movies">
           <Header />
           <SavedMovies />
           <Navigation />
           <Footer />
         </Route>
-        <Route path="/profile"></Route>
-        <Route path="/signin"></Route>
-        <Route path="/signup"></Route>
+        <Route exact path="/profile">
+          <Header />
+          <Profile />
+          <Navigation />
+          <Footer />
+        </Route>
+        <Route exact path="/signin"></Route>
+        <Route exact path="/signup"></Route>
         <Route path="*">
           <PageNotFound />
         </Route>
