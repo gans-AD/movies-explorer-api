@@ -1,8 +1,9 @@
 .nav-tab {
   list-style: none;
-  padding: 25px 0;
+  min-height: 66px;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 40px;
   margin: 0;
   background-color: #272727;
@@ -15,7 +16,7 @@
   font-weight: 500;
   text-decoration: underline;
   color: #ffffff;
-  transition: 0.8s;
+  transition: all 0.8s;
 }
 
 .nav-tab__link:hover {

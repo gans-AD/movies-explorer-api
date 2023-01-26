@@ -13,6 +13,12 @@
   height: 38px;
   margin-right: auto;
   background-image: url(../../images/header-logo.svg);
+  transition: all 0.8s;
+}
+
+.header__logo:hover {
+  opacity: 0.5;
+  scale: 1.2;
 }
 
 .header__reg-button {
@@ -23,11 +29,16 @@
   background-color: transparent;
   border: none;
   padding: 0;
-  transition: 0.8s;
+  transition: all 0.8s;
 }
 
 .header__reg-button:hover {
   opacity: 0.5;
+  scale: 1.1;
+}
+
+.header__reg-button_hidden {
+  visibility: hidden;
 }
 
 .header__login-button {
@@ -42,11 +53,12 @@
   margin-left: 30px;
   border: none;
   border-radius: 3px;
-  transition: 0.8s;
+  transition: all 0.8s;
 }
 
 .header__login-button:hover {
   opacity: 0.5;
+  scale: 1.1;
 }
 
 @media screen and (max-width: 768px) {

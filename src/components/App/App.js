@@ -4,12 +4,11 @@ import { Route, Switch } from "react-router-dom";
 import Footer from "../Footer/Footer.js";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
-import PageNotFound from "../PageNotFound/PageNotFound"
-import Preloader from "../Preloader/Preloader"
+import PageNotFound from "../PageNotFound/PageNotFound";
+import Preloader from "../Preloader/Preloader";
 import Movies from "../Movies/Movies";
 import SavedMovies from "../SavedMovies/SavedMovies";
 import Navigation from "../Navigation/Navigation";
-
 
 //const [isPreloadActive, setPreloadActive]=React.useState(false);
 //const [isNavigationOpen, setNavigationOpen]=React.useState(false);
@@ -18,38 +17,35 @@ import Navigation from "../Navigation/Navigation";
 //setPreloadActive(false);
 
 function App() {
-  return (    
-    <div className="page">      
-      <Switch>        
+  return (
+    <div className="page">
+      <Switch>
         <Route exact path="/">
           <Header />
           <Main />
           <Footer />
         </Route>
-        <Route path="/movies" >
+        <Route path="/movies">
           <Header />
           <Movies />
-          <Navigation 
-          />
+          <Navigation />
           <Footer />
         </Route>
-        <Route path="/saved-movies" >
-         <Header />
+        <Route path="/saved-movies">
+          <Header />
           <SavedMovies />
-          <Navigation 
-          />
+          <Navigation />
           <Footer />
         </Route>
-        <Route path="/profile" ></Route>
-        <Route path="/signin" ></Route>
-        <Route path="/signup" ></Route>
+        <Route path="/profile"></Route>
+        <Route path="/signin"></Route>
+        <Route path="/signup"></Route>
         <Route path="*">
           <PageNotFound />
         </Route>
       </Switch>
-      <Preloader />      
+      <Preloader />
     </div>
-    
   );
 }
 
