@@ -6,13 +6,15 @@ function Header() {
   const location = useLocation();
   const windowWidth = useWindowWidth();
 
+  const gadgetDisplay = windowWidth > 768;
+
   const showRegBtn = !(
     location.pathname === "/movies" ||
     location.pathname === "/saved-movies" ||
     location.pathname === "/profile"
   );
 
-  const showLink = location.pathname !== "/" && windowWidth > 768;
+  const showLink = location.pathname !== "/" && gadgetDisplay;
   const showProfileBtn = !(location.pathname === "/");
 
   return (
@@ -49,10 +51,13 @@ function Header() {
         )}
       </div>
       {showProfileBtn && (
-        <button type="button" className="header__profile-btn">
+        gadgetDisplay ?
+        (<button type="button" className="header__profile-btn">
           Аккаунт
         </button>
-      )}
+      ) : (
+        <button type="button" className="header__menu-btn"></button>
+      ))}
     </header>
   );
 }
