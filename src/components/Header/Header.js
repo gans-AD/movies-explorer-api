@@ -6,6 +6,7 @@ function Header() {
   const location = useLocation();
   const windowWidth = useWindowWidth();
 
+  const mainPath = location.pathname === "/";
   const gadgetDisplay = windowWidth > 768;
 
   const showRegBtn = !(
@@ -18,7 +19,7 @@ function Header() {
   const showProfileBtn = !(location.pathname === "/");
 
   return (
-    <header className="header">
+    <header className={`header ${mainPath ? "header_main-path" : null}`}>
       <Link to="/" className="header__logo"></Link>
 
       {showLink && (
