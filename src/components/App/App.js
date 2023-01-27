@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, useHistory } from "react-router-dom";
 import Footer from "../Footer/Footer.js";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
@@ -18,11 +18,21 @@ import Profile from "../Profile/Profile";
 //setPreloadActive(false);
 
 function App() {
+  const history = useHistory();
+
+  const redirectSignUp = () => {
+    history.push("signup");
+  };
+
+  const redirectSignIn = () => {
+    history.push("signin");
+  };
+
   return (
     <div className="page">
       <Switch>
         <Route exact path="/">
-          <Header />
+          <Header onRegBtn={redirectSignUp} onLoginBtn={redirectSignIn}/>
           <Main />
           <Footer />
         </Route>

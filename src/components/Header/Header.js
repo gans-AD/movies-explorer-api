@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useWindowWidth } from "@react-hook/window-size";
 import "./Header.css";
 
-function Header() {
+function Header(props) {
   const location = useLocation();
   const windowWidth = useWindowWidth();
 
@@ -41,11 +41,11 @@ function Header() {
       <div>
         {showRegBtn && (
           <>
-            <button type="button" className="header__reg-btn">
+            <button type="button" className="header__reg-btn" onClick={props.onRegBtn}>
               Регистрация
             </button>
 
-            <button type="button" className="header__login-btn">
+            <button type="button" className="header__login-btn" onClick={props.onLoginBtn}>
               Войти
             </button>
           </>
