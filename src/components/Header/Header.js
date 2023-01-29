@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useWindowWidth } from "@react-hook/window-size";
 import "./Header.css";
+import ProfileButton from "../ProfileButton/ProfileButton";
 
 function Header(props) {
   const location = useLocation();
@@ -41,24 +42,31 @@ function Header(props) {
       <div>
         {showRegBtn && (
           <>
-            <button type="button" className="header__reg-btn" onClick={props.onRegBtn}>
+            <button
+              type="button"
+              className="header__reg-btn"
+              onClick={props.onRegBtn}
+            >
               Регистрация
             </button>
 
-            <button type="button" className="header__login-btn" onClick={props.onLoginBtn}>
+            <button
+              type="button"
+              className="header__login-btn"
+              onClick={props.onLoginBtn}
+            >
               Войти
             </button>
           </>
         )}
       </div>
-      {showProfileBtn && (
-        gadgetDisplay ?
-        (<button type="button" className="header__profile-btn">
-          Аккаунт
-        </button>
-      ) : (
-        <button type="button" className="header__menu-btn"></button>
-      ))}
+
+      {showProfileBtn &&
+        (gadgetDisplay ? (
+          <ProfileButton onClick={props.onProfileBtn} />
+        ) : (
+          <button type="button" className="header__menu-btn"></button>
+        ))}
     </header>
   );
 }

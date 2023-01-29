@@ -21,35 +21,39 @@ function App() {
   const history = useHistory();
 
   const redirectSignUp = () => {
-    history.push("signup");
+    history.push("/signup");
   };
 
   const redirectSignIn = () => {
-    history.push("signin");
+    history.push("/signin");
+  };
+
+  const redirectProfile = () => {
+    history.push("/profile");
   };
 
   return (
     <div className="page">
       <Switch>
         <Route exact path="/">
-          <Header onRegBtn={redirectSignUp} onLoginBtn={redirectSignIn}/>
+          <Header onRegBtn={redirectSignUp} onLoginBtn={redirectSignIn} />
           <Main />
           <Footer />
         </Route>
         <Route exact path="/movies">
-          <Header />
+          <Header onProfileBtn={redirectProfile} />
           <Movies />
           <Navigation />
           <Footer />
         </Route>
         <Route exact path="/saved-movies">
-          <Header />
+          <Header onProfileBtn={redirectProfile} />
           <SavedMovies />
           <Navigation />
           <Footer />
         </Route>
         <Route exact path="/profile">
-          <Header />
+          <Header onProfileBtn={redirectProfile} />
           <Profile />
           <Navigation />
           <Footer />
