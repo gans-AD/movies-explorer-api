@@ -20,7 +20,7 @@ function Header(props) {
   const showProfileBtn = !(location.pathname === "/");
 
   return (
-    <header className={`header ${mainPath ? "header_main-path" : null}`}>
+    <header className={`header ${mainPath ? "header_main-path" : ""}`}>
       <Link to="/" className="header__logo"></Link>
 
       {showLink && (
@@ -30,7 +30,7 @@ function Header(props) {
               Фильмы
             </Link>
             <Link
-              to="/movies"
+              to="/saved-movies"
               className="header__link header__link_saved-movies"
             >
               Сохраненные фильмы
