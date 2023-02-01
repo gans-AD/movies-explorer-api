@@ -54,7 +54,11 @@ function App() {
             onMenuBtn={handleMenuBtnClick}
           />
           <Movies />
-          <Navigation onClose={closeNavigation} isOpen={isNavigationOpen} />
+          <Navigation
+            onClose={closeNavigation}
+            isOpen={isNavigationOpen}
+            onProfileBtn={redirectProfile}
+          />
           <Footer />
         </Route>
         <Route exact path="/saved-movies">

@@ -17,7 +17,11 @@ function Navigation(props) {
           props.isOpen ? "navigation__menu_open" : ""
         }`}
       >
-        <button type="button" className="navigation__close-btn" onClick={props.onClose}></button>
+        <button
+          type="button"
+          className="navigation__close-btn"
+          onClick={props.onClose}
+        ></button>
 
         <Link
           to="/"
@@ -45,7 +49,7 @@ function Navigation(props) {
           Сохраненные фильмы
         </Link>
 
-        <ProfileButton />
+        <ProfileButton onClick={props.onProfileBtn} />
       </div>
     </section>
   );

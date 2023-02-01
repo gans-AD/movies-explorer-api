@@ -1,7 +1,7 @@
 .navigation {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(255, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
   left: 0;
@@ -30,7 +30,7 @@
   padding-bottom: 90px;
   box-sizing: border-box;
   transform: translateX(520px);
-  transition: 0.3 ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .navigation__menu_open {
@@ -39,7 +39,7 @@
 
 .navigation__close-btn {
   background-image: url(../../images/close-button.svg);
-  background-size: contain;
+  background-size: cover;
   width: 17.68px;
   height: 17.68px;
   background-color: transparent;
@@ -49,11 +49,12 @@
   right: 29.16px;
   top: 29.16px;
   cursor: pointer;
+  transition: 0.8s;
 }
 
 .navigation__close-btn:hover {
   opacity: 0.5;
-  
+  scale: 1.1;
 }
 
 .navigation__link {
@@ -64,6 +65,11 @@
   text-decoration: none;
   padding-bottom: 4px;
   margin-top: 22px;
+  transition: 0.8s;
+}
+
+.navigation__link:hover {
+  opacity: 0.5;
 }
 
 .navigation__link:first-of-type {
@@ -76,4 +82,24 @@
 
 .navigation__link_active {
   border-bottom: solid 2px #ffffff;
+}
+
+/*ширина 430px назначена для правильного отображения на IPhone 12/13 Pro Max*/
+@media screen and (max-width: 430px) {
+  .navigation__menu {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 144px;
+    padding-bottom: 46px;
+    transform: translateX(320px);
+  }
+
+  .navigation__menu_open {
+    transform: none;
+  }
+
+  .navigation__link {
+    margin-top: 15px;
+    padding-bottom: 7px;
+  }
 }
