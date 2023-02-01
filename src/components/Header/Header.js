@@ -65,7 +65,7 @@ function Header(props) {
         (gadgetDisplay ? (
           <ProfileButton onClick={props.onProfileBtn} />
         ) : (
-          <button type="button" className="header__menu-btn"></button>
+          <button type="button" className="header__menu-btn" onClick={props.onMenuBtn} ></button>
         ))}
     </header>
   );

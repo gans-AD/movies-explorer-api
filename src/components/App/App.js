@@ -12,12 +12,10 @@ import Navigation from "../Navigation/Navigation";
 import Profile from "../Profile/Profile";
 
 //const [isPreloadActive, setPreloadActive]=React.useState(false);
-//const [isNavigationOpen, setNavigationOpen]=React.useState(false);
-
-//setNavigationOpen(false);
-//setPreloadActive(false);
 
 function App() {
+  const [isNavigationOpen, setNavigationOpen] = React.useState(false);
+
   const history = useHistory();
 
   const redirectSignUp = () => {
@@ -32,6 +30,16 @@ function App() {
     history.push("/profile");
   };
 
+  // открывние меню
+  const handleMenuBtnClick = () => {
+    setNavigationOpen(true);
+  };
+
+  // закрытие меню
+  const closeNavigation = () => {
+    setNavigationOpen(false);
+  };
+
   return (
     <div className="page">
       <Switch>
@@ -41,9 +49,12 @@ function App() {
           <Footer />
         </Route>
         <Route exact path="/movies">
-          <Header onProfileBtn={redirectProfile} />
+          <Header
+            onProfileBtn={redirectProfile}
+            onMenuBtn={handleMenuBtnClick}
+          />
           <Movies />
-          <Navigation />
+          <Navigation onClose={closeNavigation} isOpen={isNavigationOpen} />
           <Footer />
         </Route>
         <Route exact path="/saved-movies">
