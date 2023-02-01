@@ -12,9 +12,12 @@ function Navigation(props) {
 
   return (
     <section className={`navigation ${props.isOpen ? "navigation_open" : ""}`}>
-      <div className="navigation__overlay"></div>
-      <div className={`navigation__menu ${props.isOpen ? "navigation__menu_open" : ""}`}>
-        <button type="button" className="navigation__close-btn"></button>
+      <div
+        className={`navigation__menu ${
+          props.isOpen ? "navigation__menu_open" : ""
+        }`}
+      >
+        <button type="button" className="navigation__close-btn" onClick={props.onClose}></button>
 
         <Link
           to="/"

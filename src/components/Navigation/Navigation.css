@@ -1,21 +1,19 @@
 .navigation {
-  
-
-  transition: all 3s;
-}
-
-.navigation__overlay {
   width: 100vw;
   height: 100vh;
   background-color: rgba(255, 0, 0, 0.3);
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
+  transition: 0.3s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .navigation_open {
-  transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
 }
 
 .navigation__menu {
@@ -31,10 +29,12 @@
   padding-top: 159px;
   padding-bottom: 90px;
   box-sizing: border-box;
-  transform: translateX(500px);
+  transform: translateX(520px);
+  transition: 0.3 ease-in-out;
 }
 
 .navigation__menu_open {
+  transform: none;
 }
 
 .navigation__close-btn {
@@ -48,6 +48,12 @@
   position: absolute;
   right: 29.16px;
   top: 29.16px;
+  cursor: pointer;
+}
+
+.navigation__close-btn:hover {
+  opacity: 0.5;
+  
 }
 
 .navigation__link {
