@@ -102,4 +102,9 @@
     margin-top: 15px;
     padding-bottom: 7px;
   }
+
+  .navigation__close-btn {
+    right: 20.16px;
+    top: 20.16px;
+  }
 }

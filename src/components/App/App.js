@@ -64,13 +64,21 @@ function App() {
         <Route exact path="/saved-movies">
           <Header onProfileBtn={redirectProfile} />
           <SavedMovies />
-          <Navigation />
+          <Navigation
+            onClose={closeNavigation}
+            isOpen={isNavigationOpen}
+            onProfileBtn={redirectProfile}
+          />
           <Footer />
         </Route>
         <Route exact path="/profile">
           <Header onProfileBtn={redirectProfile} />
           <Profile />
-          <Navigation />
+          <Navigation
+            onClose={closeNavigation}
+            isOpen={isNavigationOpen}
+            onProfileBtn={redirectProfile}
+          />
           <Footer />
         </Route>
         <Route exact path="/signin"></Route>
