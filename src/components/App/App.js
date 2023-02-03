@@ -14,7 +14,12 @@ import Profile from "../Profile/Profile";
 //const [isPreloadActive, setPreloadActive]=React.useState(false);
 
 function App() {
+  
+
   const [isNavigationOpen, setNavigationOpen] = React.useState(false);
+  React.useEffect(() => {
+    setNavigationOpen(false)
+  }, [isNavigationOpen])
 
   const history = useHistory();
 
@@ -62,7 +67,10 @@ function App() {
           <Footer />
         </Route>
         <Route exact path="/saved-movies">
-          <Header onProfileBtn={redirectProfile} />
+          <Header
+            onProfileBtn={redirectProfile}
+            onMenuBtn={handleMenuBtnClick}
+          />
           <SavedMovies />
           <Navigation
             onClose={closeNavigation}
@@ -72,7 +80,10 @@ function App() {
           <Footer />
         </Route>
         <Route exact path="/profile">
-          <Header onProfileBtn={redirectProfile} />
+          <Header
+            onProfileBtn={redirectProfile}
+            onMenuBtn={handleMenuBtnClick}
+          />
           <Profile />
           <Navigation
             onClose={closeNavigation}
