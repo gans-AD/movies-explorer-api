@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Route, Switch, useHistory } from "react-router-dom";
+import { Route, Switch, useHistory, useLocation } from "react-router-dom";
 import Footer from "../Footer/Footer.js";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
@@ -14,14 +14,14 @@ import Profile from "../Profile/Profile";
 //const [isPreloadActive, setPreloadActive]=React.useState(false);
 
 function App() {
-  
+  const history = useHistory();
+  const location = useLocation()
 
   const [isNavigationOpen, setNavigationOpen] = React.useState(false);
-  React.useEffect(() => {
-    setNavigationOpen(false)
-  }, [isNavigationOpen])
 
-  const history = useHistory();
+  React.useEffect(() => {
+    closeNavigation();
+  },[location.pathname])
 
   const redirectSignUp = () => {
     history.push("/signup");

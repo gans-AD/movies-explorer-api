@@ -6,7 +6,6 @@ function Navigation(props) {
   const location = useLocation();
 
   // переменные для определения текущего роута
-  const mainPath = location.pathname === "/";
   const moviesPath = location.pathname === "/movies";
   const savedMoviesPath = location.pathname === "/saved-movies";
 
@@ -23,12 +22,7 @@ function Navigation(props) {
           onClick={props.onClose}
         ></button>
 
-        <Link
-          to="/"
-          className={`navigation__link ${
-            mainPath ? "navigation__link_active" : ""
-          }`}
-        >
+        <Link to="/" className="navigation__link">
           Главная
         </Link>
 
