@@ -1,4 +1,4 @@
-.filter {
+.switch {
   height: 40px;
   display: flex;
   align-items: center;
@@ -7,15 +7,44 @@
   margin-right: 30px;
 }
 
-.filter__checkbox {
-    width: 36px;
-    height: 20px;
-    border-radius: 20px;
-    border: none;
-    background-color: #3DDC84;
+.switch__checkbox {
+  position: absolute;
+  z-index: -100;
 }
 
-.filter__name {
+.switch__slider {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #2f2f2f;
+  cursor: pointer;
+  margin-left: 29px;
+  margin-right: 14px;
+  transition: all 0.6s;
+}
+
+.switch__checkbox:checked + .switch__slider {
+  background-color: #3ddc84;
+}
+
+.switch__slider::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  margin: 6px;
+  position: absolute;
+  left: 0px;
+  transition: all 0.4s;
+}
+
+.switch__checkbox:checked + .switch__slider::before {
+  left: 16px;
+}
+
+.switch__name {
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
