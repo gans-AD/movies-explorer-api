@@ -1,0 +1,23 @@
+.filter {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-left: solid 1px #505050;
+  margin-left: 19px;
+  margin-right: 30px;
+}
+
+.filter__checkbox {
+    width: 36px;
+    height: 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #3DDC84;
+}
+
+.filter__name {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #ffffff;
+}

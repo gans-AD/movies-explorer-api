@@ -1,11 +1,12 @@
-import "./Movies.css"
+import SearchForm from "../SearchForm/SearchForm";
+import "./Movies.css";
 
 function Movies() {
-    return(
-        <section>
-            Movies
-            </section>
-    )
+  return (
+    <main className="movies">
+      <SearchForm />
+    </main>
+  );
 }
 
 export default Movies;
