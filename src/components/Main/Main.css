@@ -1,18 +1,30 @@
 .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 70px;
+}
+
+@media screen and (min-width: 1280px) {
+  .main {
+    padding: 0 calc((100% - 1140px) / 2);
+  }
+}
+
+@media screen and (m-width: 768px) {
+  .main {
+    padding: 0 50px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .main {
-        padding: 0 50px;
-    }
+  .main {
+    padding: 0 50px;
   }
-  
-  @media screen and (max-width: 430px) {
-    .main {
-        padding: 0 14px;
-    }
+}
+
+@media screen and (max-width: 430px) {
+  .main {
+    padding: 0 14px;
   }
+}

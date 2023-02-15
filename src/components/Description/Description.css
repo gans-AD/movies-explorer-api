@@ -18,11 +18,17 @@
   border-bottom: 1px solid #dadada;
 }
 
+@media screen and (min-width: 1280px) {
+  .description:nth-child(2n) {
+    padding: 0 calc((100vw - 100%) / 2);
+  }
+}
+
 @media screen and (max-width: 768px) {
   .description:nth-child(2n) {
     padding: 0 50px;
   }
-  
+
   .description__title {
     padding-top: 90px;
   }
@@ -32,7 +38,7 @@
   .description:nth-child(2n) {
     padding: 0 14px;
   }
-  
+
   .description__title {
     font-size: 18px;
     line-height: 22px;
