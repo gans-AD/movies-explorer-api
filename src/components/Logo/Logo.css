@@ -1,0 +1,12 @@
+.logo {
+    width: 38px;
+    height: 38px;
+    margin-right: auto;
+    background-image: url(../../images/header-logo.svg);
+    transition: all 0.8s;
+  }
+  
+  .logo:hover {
+    opacity: 0.5;
+    scale: 1.2;
+  }

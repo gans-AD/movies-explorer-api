@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useWindowWidth } from "@react-hook/window-size";
 import "./Header.css";
 import ProfileButton from "../ProfileButton/ProfileButton";
+import Logo from "../Logo/Logo";
 
 function Header(props) {
   const location = useLocation();
@@ -21,7 +22,7 @@ function Header(props) {
 
   return (
     <header className={`header ${mainPath ? "header_main-path" : ""}`}>
-      <Link to="/" className="header__logo"></Link>
+      <Logo />
 
       {showLink && (
         <>
