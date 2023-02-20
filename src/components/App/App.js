@@ -10,6 +10,7 @@ import Movies from "../Movies/Movies";
 import SavedMovies from "../SavedMovies/SavedMovies";
 import Navigation from "../Navigation/Navigation";
 import Profile from "../Profile/Profile";
+import Register from "../Register/Register";
 
 //const [isPreloadActive, setPreloadActive]=React.useState(false);
 
@@ -93,7 +94,9 @@ function App() {
           <Footer />
         </Route>
         <Route exact path="/signin"></Route>
-        <Route exact path="/signup"></Route>
+        <Route exact path="/signup">
+          <Register />
+        </Route>
         <Route path="*">
           <PageNotFound />
         </Route>
