@@ -15,7 +15,8 @@
   display: flex;
   justify-content: center;
   gap: 16px;
-  flex-grow: 1;
+  position: absolute;
+  width: calc(100% - 140px);
 }
 
 .header__link {
@@ -96,6 +97,10 @@
 @media screen and (min-width: 1280px) {
   .header {
     padding: 0 calc((100% - 1140px) / 2);
+  }
+
+  .header__link-container {
+    width: 1140px;
   }
 }
 

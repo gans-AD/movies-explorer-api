@@ -105,7 +105,6 @@
   text-decoration: none;
 }
 
-
 @media screen and (max-width: 768px) {
   .sign {
     padding: 232px 0;
@@ -133,5 +132,4 @@
     line-height: 15px;
     margin-top: 14px;
   }
-  
 }

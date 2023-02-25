@@ -1,8 +1,12 @@
 import "./Logo.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Logo() {
-  return <Link to="/" className="logo"></Link>;
+  const location = useLocation();
+  const signPath =
+    location.pathname === "/signin" || location.pathname === "/signup";
+
+  return <Link to="/" className={`logo ${signPath ? "logo_sign" : " "}`}></Link>;
 }
 
 export default Logo;

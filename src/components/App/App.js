@@ -11,6 +11,7 @@ import SavedMovies from "../SavedMovies/SavedMovies";
 import Navigation from "../Navigation/Navigation";
 import Profile from "../Profile/Profile";
 import Register from "../Register/Register";
+import Login from "../Login/Login";
 
 //const [isPreloadActive, setPreloadActive]=React.useState(false);
 
@@ -91,9 +92,10 @@ function App() {
             isOpen={isNavigationOpen}
             onProfileBtn={redirectProfile}
           />
-          <Footer />
         </Route>
-        <Route exact path="/signin"></Route>
+        <Route exact path="/signin">
+          <Login />
+        </Route>
         <Route exact path="/signup">
           <Register />
         </Route>

@@ -1,32 +1,20 @@
-import "./Register.css";
+import "./Login.css";
 import { Link } from "react-router-dom";
 import Logo from "../Logo/Logo";
 
-function Register(props) {
+function Login(props) {
 
   return (
-    <section className="sign sign_up">
+    <section className="sign sign_in">
       <Logo />
-      <h2 className="sign__title">Добро пожаловать!</h2>
+      <h2 className="sign__title">Рады видеть!</h2>
       <form name="signup" className="form form_sign">
-        <div className="form__field">
-          <label className="form__label">Имя</label>
-          <input
-            name="name"
-            type="text"
-            minLength={2}
-            maxLength={30}
-            className="form__input"
-            required
-          ></input>
-          <span className="form__input-error"></span>
-        </div>
         <div className="form__field">
           <label className="form__label">E-mail</label>
           <input
             name="email"
             type="email"
-            className="form__input"
+            className="form__input form__input_email"
             required
           ></input>
           <span className="form__input-error"></span>
@@ -42,14 +30,14 @@ function Register(props) {
           <span className="form__input-error"></span>
         </div>
 
-        <button type="submit" className="form__btn form__btn_signup">
-          Зарегистрироваться
+        <button type="submit" className="form__btn form__btn_signin">
+          Войти
         </button>
         <span className="form__assistant">
-          Уже зарегистрированы?
-          <Link to="/signin" className="form__assistant form__assistant_link">
+          Ещё не зарегистрированы?
+          <Link to="/signup" className="form__assistant form__assistant_link">
             {" "}
-            Войти
+            Регистрация
           </Link>
         </span>
       </form>
@@ -57,4 +45,4 @@ function Register(props) {
   );
 }
 
-export default Register;
+export default Login;
