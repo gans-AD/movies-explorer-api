@@ -5,10 +5,10 @@ import Logo from "../Logo/Logo";
 function Login(props) {
 
   return (
-    <section className="sign sign_in">
+    <section className="signin">
       <Logo />
-      <h2 className="sign__title">Рады видеть!</h2>
-      <form name="signup" className="form form_sign">
+      <h2 className="signin__title">Рады видеть!</h2>
+      <form name="signin" className="form form_sign">
         <div className="form__field">
           <label className="form__label">E-mail</label>
           <input

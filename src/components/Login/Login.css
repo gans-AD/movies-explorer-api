@@ -1,5 +1,5 @@
-.sign {
-  max-width: 396px;
+.signin {
+  width: 396px;
   min-height: 100vh;
   margin: 0 auto;
   padding: 70px 0;
@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-.sign__title {
+.signin__title {
   font-size: 24px;
   font-weight: 500;
   line-height: 29px;
@@ -106,18 +106,19 @@
 }
 
 @media screen and (max-width: 768px) {
-  .sign {
+  .signin {
     padding: 232px 0;
   }
 }
 
 @media screen and (max-width: 430px) {
-  .sign {
+  .signin {
+    width: 100%;
     padding: 56px 30px 30px;
     align-items: center;
   }
 
-  .sign__title {
+  .signin__title {
     margin: 50px 0 80px;
     text-align: left;
   }

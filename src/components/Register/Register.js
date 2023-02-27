@@ -5,9 +5,9 @@ import Logo from "../Logo/Logo";
 function Register(props) {
 
   return (
-    <section className="sign sign_up">
+    <section className="signup">
       <Logo />
-      <h2 className="sign__title">Добро пожаловать!</h2>
+      <h2 className="signup__title">Добро пожаловать!</h2>
       <form name="signup" className="form form_sign">
         <div className="form__field">
           <label className="form__label">Имя</label>
