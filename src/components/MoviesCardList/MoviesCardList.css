@@ -1,4 +1,25 @@
 .movie__list {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  padding: 70px 70px 10px;
+  gap: 40px;
+}
+
+@media screen and (min-width: 1280px) {
+  .movie__list {
+    padding: 70px calc((100% - 1140px) / 2) 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movie__list {
+    padding: 60px 30px 30px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .movie__list {
+    padding: 40px 10px 20px;
+    gap: 20px;
+  }
 }
