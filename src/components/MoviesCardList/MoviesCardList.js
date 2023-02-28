@@ -1,8 +1,11 @@
+import MoviesCard from "../MoviesCard/MoviesCard";
 import "./MoviesCardList.css"
 
 function MoviesCardList() {
     return (
-        <section className="movie-list"></section>
+        <section className="movie__list">
+            <MoviesCard />
+        </section>
     )
 }
 

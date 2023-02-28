@@ -3,7 +3,7 @@ import "./Profile.css";
 function Profile() {
   return (
     <section className="profile">
-      <h2 className="profile__title">Привет, о великий!</h2>
+      <h2 className="profile__title">Привет, Виталий!</h2>
       <form name="profile" className="form-profile">
         <div className="form-profile__field">
           <label className="form-profile__label">Имя</label>
