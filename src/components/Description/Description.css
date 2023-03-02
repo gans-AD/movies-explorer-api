@@ -1,6 +1,8 @@
 .description {
   color: #ffffff;
   width: 100%;
+  padding: 0 70px;
+  box-sizing: border-box;
 }
 
 .description:nth-child(2n) {
@@ -20,8 +22,12 @@
 }
 
 @media screen and (min-width: 1280px) {
+  .description {
+    padding: 0 calc((100vw - 1140px) / 2);
+  }
+
   .description:nth-child(2n) {
-    padding: 0 calc((100vw - 100%) / 2);
+    padding: 0 calc((100vw - 1140px) / 2);
   }
 }
 
