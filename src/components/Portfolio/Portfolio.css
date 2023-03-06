@@ -55,6 +55,10 @@
 
 
 @media screen and (max-width: 768px) {
+  .portfolio {
+    padding: 0 50px;
+  }
+
   .portfolio__link {
     font-size: 28px;
   }
@@ -62,6 +66,10 @@
 
 /*ширина 430px назначена для правильного отображения на IPhone 12/13 Pro Max*/
 @media screen and (max-width: 430px) {
+  .portfolio {
+    padding: 0 14px;
+  }
+
   .portfolio__title {
     font-size: 14px;
   }

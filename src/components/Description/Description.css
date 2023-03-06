@@ -7,8 +7,6 @@
 
 .description:nth-child(2n) {
   background-color: #272727;
-  padding: 0 70px;
-  box-sizing: border-box;
 }
 
 .description__title {
@@ -32,7 +30,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .description:nth-child(2n) {
+  .description {
     padding: 0 50px;
   }
 
@@ -42,7 +40,7 @@
 }
 
 @media screen and (max-width: 430px) {
-  .description:nth-child(2n) {
+  .description {
     padding: 0 14px;
   }
 
