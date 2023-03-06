@@ -35,7 +35,7 @@ function Login(props) {
         </button>
         <span className="form__assistant">
           Ещё не зарегистрированы?
-          <Link to="/signup" className="form__assistant form__assistant_link">
+          <Link to="/signup" className="form__assistant-link">
             {" "}
             Регистрация
           </Link>

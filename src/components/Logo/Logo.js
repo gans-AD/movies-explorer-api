@@ -6,7 +6,7 @@ function Logo() {
   const signPath =
     location.pathname === "/signin" || location.pathname === "/signup";
 
-  return <Link to="/" className={`logo ${signPath ? "logo_sign" : " "}`}></Link>;
+  return <Link to="/" className={`logo-link ${signPath ? "logo-link_sign" : " "}`}></Link>;
 }
 
 export default Logo;

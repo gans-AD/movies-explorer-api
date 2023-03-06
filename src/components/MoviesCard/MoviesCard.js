@@ -13,7 +13,7 @@ function MoviesCard(props) {
   }
 
   return (
-    <article className="movie__card">
+    <article className="movie">
       <div className="movie__info">
         <h2 className="movie__title">{props.nameRU}</h2>
         <p className="movie__duration">

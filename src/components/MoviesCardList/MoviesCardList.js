@@ -3,7 +3,7 @@ import "./MoviesCardList.css";
 
 function MoviesCardList() {
   return (
-    <section className="movie__list">
+    <section className="movie-list">
       <MoviesCard
         nameRU="«Роллинг Стоунз» в изгнании"
         duration={61}
