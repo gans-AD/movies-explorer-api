@@ -5,7 +5,7 @@ import Logo from "../Logo/Logo";
 function Register(props) {
 
   return (
-    <section className="signup">
+    <main className="signup">
       <Logo />
       <h2 className="signup__title">Добро пожаловать!</h2>
       <form name="signup" className="form form_sign">
@@ -53,7 +53,7 @@ function Register(props) {
           </Link>
         </span>
       </form>
-    </section>
+    </main>
   );
 }
 

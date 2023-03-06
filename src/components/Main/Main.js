@@ -9,7 +9,7 @@ import Techs from "../Techs/Techs";
 
 function Main() {
   return (
-    <div className="main">
+    <main className="main">
       <Promo />
       <NavTab />
       <Description title="О проекте">
@@ -22,7 +22,7 @@ function Main() {
         <AboutMe />
       </Description>
       <Portfolio />
-    </div>
+    </main>
   );
 }
 

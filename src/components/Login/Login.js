@@ -5,7 +5,7 @@ import Logo from "../Logo/Logo";
 function Login(props) {
 
   return (
-    <section className="signin">
+    <main className="signin">
       <Logo />
       <h2 className="signin__title">Рады видеть!</h2>
       <form name="signin" className="form form_sign">
@@ -41,7 +41,7 @@ function Login(props) {
           </Link>
         </span>
       </form>
-    </section>
+    </main>
   );
 }
 
