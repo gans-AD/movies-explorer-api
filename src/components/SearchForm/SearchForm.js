@@ -18,7 +18,7 @@ function SearchForm() {
             className="search__input"
             required
           ></input>
-          <button type="button" className="search__button">
+          <button type="submit" className="search__button">
             Найти
           </button>
           {!mobileDisplay && <FilterCheckbox />}
