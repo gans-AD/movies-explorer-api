@@ -1,4 +1,9 @@
 .nav-tab {
+  background-color: #272727;
+  width: 100%;
+}
+
+.nav-tab__links {
   list-style: none;
   min-height: 66px;
   display: flex;
@@ -7,8 +12,6 @@
   gap: 40px;
   padding: 0;
   margin: 0;
-  background-color: #272727;
-  width: 100%;
 }
 
 .nav-tab__link {
@@ -29,7 +32,7 @@
   .nav-tab {
     gap: 24px;
   }
-  
+
   .nav-tab__link {
     font-size: 11px;
   }
