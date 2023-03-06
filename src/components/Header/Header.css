@@ -1,0 +1,133 @@
+.header {
+  display: flex;
+  width: 100%;
+  height: 74px;
+  align-items: center;
+  padding: 0 70px;
+  box-sizing: border-box;
+}
+
+.header_main-path {
+  background-color: #073042;
+}
+
+.header__link-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  position: absolute;
+  width: calc(100% - 140px);
+}
+
+.header__link {
+  font-size: 13px;
+  line-height: 18px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.8s;
+}
+
+.header__link:hover {
+  opacity: 0.5;
+}
+
+.header__link_movies {
+  font-weight: 500;
+}
+
+.header__link_saved-movies {
+  font-weight: 400;
+}
+
+.header__reg-btn {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  transition: all 0.8s;
+  cursor: pointer;
+}
+
+.header__reg-btn:hover {
+  opacity: 0.5;
+  scale: 1.1;
+}
+
+.header__login-btn {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #000000;
+  background-color: #3ddc84;
+  width: 76px;
+  height: 32px;
+  padding: 0;
+  margin-left: 30px;
+  border: none;
+  border-radius: 3px;
+  transition: all 0.8s;
+  cursor: pointer;
+}
+
+.header__login-btn:hover {
+  opacity: 0.5;
+  scale: 1.1;
+}
+
+.header__menu-btn {
+  width: 44px;
+  height: 44px;
+  background-color: transparent;
+  background-image: url(../../images/menu-button.svg);
+  background-position: center;
+  border: none;
+  padding: 0;
+  transition: all 0.8s;
+  cursor: pointer;
+}
+
+.header__menu-btn:hover {
+  opacity: 0.5;
+  scale: 1.1;
+}
+
+@media screen and (min-width: 1280px) {
+  .header {
+    padding: 0 calc((100% - 1140px) / 2);
+  }
+
+  .header__link-container {
+    width: 1140px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 0 30px 0 30px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .header {
+    padding: 0 14px 0 14px;
+  }
+
+  .header__reg-btn {
+    font-size: 10px;
+  }
+
+  .header__login-btn {
+    font-size: 10px;
+    width: 54px;
+    height: 26px;
+    margin-left: 14px;
+  }
+
+  .header__menu-btn {
+    width: 40px;
+    height: 43px;
+  }
+}

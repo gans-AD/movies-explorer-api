@@ -1,0 +1,27 @@
+.saved-movies {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 70px 70px 10px;
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 1280px) {
+  .saved-movies {
+    padding: 70px calc((100% - 1140px) / 2) 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .saved-movies {
+    padding: 60px 30px 30px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .saved-movies {
+    padding: 40px 10px 20px;
+    gap: 20px;
+  }
+}

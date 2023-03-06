@@ -1,0 +1,108 @@
+.footer {
+  min-height: 172px;
+  color: #8b8b8b;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 105px;
+  padding: 0 70px;
+  box-sizing: border-box;
+}
+
+.footer__info {
+  border-bottom: 1px solid #424242;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+  padding: 79px 0 20px;
+  margin: 0;
+}
+
+.footer__navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__copyright {
+  margin: 20px 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.footer__links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin: 20px 0;
+  line-height: 16px;
+  text-align: center;
+}
+
+.footer__link {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  text-decoration: none;
+  color: #ffffff;
+  margin-left: 20px;
+  transition: 0.8s;
+}
+
+.footer__link:hover {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 1280px) {
+  .footer {
+    padding: 0 calc((100% - 1140px) / 2);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    margin-top: 70px;
+    padding: 0 30px;
+  }
+}
+
+/*ширина 430px назначена для правильного отображения на IPhone 12/13 Pro Max*/
+@media screen and (max-width: 430px) {
+  .footer {
+    margin-top: 50px;
+    padding: 0 10px;
+  }
+
+  .footer__info {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .footer__navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__copyright {
+    font-size: 12px;
+    line-height: 15px;
+    color: #8b8b8b;
+    order: 1;
+    margin: 0 auto 10px;
+  }
+
+  .footer__links {
+    flex-direction: column;
+    margin: 30px auto 30px;
+    line-height: 15px;
+    gap: 12px;
+  }
+
+  .footer__link {
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0;
+  }
+}
