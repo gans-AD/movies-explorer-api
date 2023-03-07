@@ -43,7 +43,7 @@ function App() {
   //и перенаправляем в "/"
   React.useEffect(() => {
     validateToken();
-    loggedIn ? history.push("/") : history.push("/signin");
+    loggedIn ? history.push("/") : history.push("/login");
   }, [history, loggedIn]);
 
   React.useEffect(() => {
@@ -55,7 +55,7 @@ function App() {
   };
 
   const redirectSignIn = () => {
-    history.push("/signin");
+    history.push("/login");
   };
 
   const redirectProfile = () => {
@@ -78,7 +78,7 @@ function App() {
     auth
       .register(data)
       .then(() => {
-        history.push("/signin");
+        history.push("/login");
       })
       .catch((err) => {
         console.log(err);
@@ -93,6 +93,7 @@ function App() {
     auth
       .authorize(data)
       .then((res) => {
+        console.log("Валидация")
         validateToken();
       })
       .catch((err) => {
@@ -137,7 +138,7 @@ function App() {
           <ProtectedRoute exact path="/profile">
             <Profile />
           </ProtectedRoute>
-          <Route exact path="/signin">
+          <Route exact path="/login">
             <Login onLogin={onLogin} />
           </Route>
           <Route exact path="/signup">
