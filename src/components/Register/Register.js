@@ -42,7 +42,7 @@ function Register(props) {
           <span className="form__input-error"></span>
         </div>
 
-        <button type="submit" className="form__btn form__btn_signup">
+        <button type="submit" className="form__btn form__btn_signup" onSubmit={props.onRegister} >
           Зарегистрироваться
         </button>
         <span className="form__assistant">

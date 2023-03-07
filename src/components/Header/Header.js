@@ -3,6 +3,7 @@ import { useWindowWidth } from "@react-hook/window-size";
 import "./Header.css";
 import ProfileButton from "../ProfileButton/ProfileButton";
 import Logo from "../Logo/Logo";
+import Navigation from "../Navigation/Navigation";
 
 function Header(props) {
   const location = useLocation();
@@ -66,8 +67,18 @@ function Header(props) {
         (gadgetDisplay ? (
           <ProfileButton onClick={props.onProfileBtn} />
         ) : (
-          <button type="button" className="header__menu-btn" onClick={props.onMenuBtn} ></button>
+          <button
+            type="button"
+            className="header__menu-btn"
+            onClick={props.onMenuBtn}
+          ></button>
         ))}
+
+      <Navigation
+        onClose={props.onCloseNav}
+        isOpen={props.isOpenNav}
+        onProfileBtn={props.onProfileBtn}
+      />
     </header>
   );
 }

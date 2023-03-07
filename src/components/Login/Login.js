@@ -30,7 +30,7 @@ function Login(props) {
           <span className="form__input-error"></span>
         </div>
 
-        <button type="submit" className="form__btn form__btn_signin">
+        <button type="submit" className="form__btn form__btn_signin" onSubmit={props.onLogin} >
           Войти
         </button>
         <span className="form__assistant">
