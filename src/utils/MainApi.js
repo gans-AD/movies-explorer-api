@@ -3,7 +3,7 @@ import { baseUrlCinematronAuth } from "./constants";
 class MainApi {
   constructor(options) {
     this._url = options.baseUrl;
-    this._headers = options.header;
+    this._headers = options.headers;
   }
 
   _requestHandler(res) {
@@ -45,9 +45,7 @@ class MainApi {
   tokenCheck() {
     return fetch(`${this._url}/users/me`, {
       method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: this._headers,
       credentials: "include",
     }).then(this._requestHandler);
   }
