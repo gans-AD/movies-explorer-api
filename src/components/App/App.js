@@ -26,12 +26,12 @@ function App() {
   const [isLoader, setIsLoader] = React.useState(false);
   const [isNavigationOpen, setNavigationOpen] = React.useState(false);
   const [loggedIn, setLoggedIn] = React.useState(false);
-/*  const [isInfoTooltip, setIsInfoTooltip] = React.useState({
-    isOpen: false,
-    invocation: "success",
-    text: "",
-  }) //в свойство invocation записывается success для сообщений об успешных действиях и error для сообщений об ошибках 
-*/
+  /*  const [isInfoTooltip, setIsInfoTooltip] = React.useState({
+      isOpen: false,
+      invocation: "success",
+      text: "",
+    }) //в свойство invocation записывается success для сообщений об успешных действиях и error для сообщений об ошибках 
+  */
 
   //валидация токена
   const validateToken = () => {
@@ -49,10 +49,13 @@ function App() {
   //проверяем наличие сохранненого токена
   //и перенаправляем в "/movies"
   React.useEffect(() => {
-    validateToken();
+    if (location.pathname !== "/") {
+      validateToken();
 
-    loggedIn ? history.push("/movies") : history.push("/login");
-  }, [history, loggedIn]);
+      loggedIn ? history.push("/movies") : history.push("/login");
+    }
+
+  }, [history, loggedIn, location.pathname]);
 
   React.useEffect(() => {
     closeNavigation();
