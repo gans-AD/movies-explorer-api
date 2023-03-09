@@ -40,10 +40,11 @@ function App() {
   };
 
   //проверяем наличие сохранненого токена
-  //и перенаправляем в "/"
+  //и перенаправляем в "/movies"
   React.useEffect(() => {
     validateToken();
-    loggedIn ? history.push("/") : history.push("/login");
+
+    loggedIn ? history.push("/movies") : history.push("/login");
   }, [history, loggedIn]);
 
   React.useEffect(() => {
@@ -93,7 +94,7 @@ function App() {
     auth
       .authorize(data)
       .then((res) => {
-        console.log("Валидация")
+        console.log("Валидация");
         validateToken();
       })
       .catch((err) => {
