@@ -16,6 +16,7 @@ import Profile from "../Profile/Profile";
 import Register from "../Register/Register";
 import Login from "../Login/Login";
 import auth from "../../utils/MainApi";
+import InfoTooltip from "../InfoTooltip/InfoTooltip";
 
 function App() {
   const history = useHistory();
@@ -25,6 +26,12 @@ function App() {
   const [isLoader, setIsLoader] = React.useState(false);
   const [isNavigationOpen, setNavigationOpen] = React.useState(false);
   const [loggedIn, setLoggedIn] = React.useState(false);
+/*  const [isInfoTooltip, setIsInfoTooltip] = React.useState({
+    isOpen: false,
+    invocation: "success",
+    text: "",
+  }) //в свойство invocation записывается success для сообщений об успешных действиях и error для сообщений об ошибках 
+*/
 
   //валидация токена
   const validateToken = () => {
@@ -149,6 +156,10 @@ function App() {
             <PageNotFound />
           </Route>
         </Switch>
+        <Route exact path={["/", "/movies", "/saved-movies"]}>
+          <Footer />
+        </Route>
+        <InfoTooltip text="Указан неверный пароль или имя пользователя" />
         <Preloader isOpen={isLoader} />
       </div>
     </CurrentUserContext.Provider>
