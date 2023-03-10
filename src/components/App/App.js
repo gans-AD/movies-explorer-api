@@ -17,6 +17,7 @@ import Register from "../Register/Register";
 import Login from "../Login/Login";
 import auth from "../../utils/MainApi";
 import InfoTooltip from "../InfoTooltip/InfoTooltip";
+import moviesApi from "../../utils/MoviesApi";
 
 function App() {
   const history = useHistory();
@@ -35,6 +36,7 @@ function App() {
 
   //валидация токена
   const validateToken = () => {
+    setIsLoader(true);
     auth
       .tokenCheck()
       .then((res) => {
@@ -43,16 +45,26 @@ function App() {
       })
       .catch((err) => {
         console.log(err);
+      }).finally(() => {
+        setIsLoader(false);
       });
   };
+
+  //загружаем информацию о карточках с сервера
+  React.useEffect(() => {
+    moviesApi.search(()=> {
+      
+    })
+  })
 
   //проверяем наличие сохранненого токена
   //и перенаправляем в "/movies"
   React.useEffect(() => {
+
     if (location.pathname !== "/") {
       validateToken();
 
-      loggedIn ? history.push("/movies") : history.push("/login");
+      loggedIn ? history.push("/movies") : console.log("нужно авторизоваться")//history.push("/login");
     }
 
   }, [history, loggedIn, location.pathname]);
@@ -131,24 +143,29 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Main />
-            <Footer />
           </Route>
-          <ProtectedRoute exact path="/movies">
-            <Movies />
-            <Footer />
-          </ProtectedRoute>
-          <ProtectedRoute exact path="/saved-movies">
-            <SavedMovies />
+          <ProtectedRoute
+            exact path="/movies"
+            loggedIn={true}
+            component={Movies}
+          />
+          <ProtectedRoute
+            exact path="/saved-movies"
+            loggedIn={true}
+            component={SavedMovies}
+          >
             <Navigation
               onClose={closeNavigation}
               isOpen={isNavigationOpen}
               onProfileBtn={redirectProfile}
             />
-            <Footer />
           </ProtectedRoute>
-          <ProtectedRoute exact path="/profile">
-            <Profile />
-          </ProtectedRoute>
+          <ProtectedRoute
+            exact path="/profile"
+            loggedIn={true}
+            component={Profile}
+          />
+
           <Route exact path="/login">
             <Login onLogin={onLogin} />
           </Route>
