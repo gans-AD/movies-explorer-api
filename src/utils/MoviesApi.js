@@ -14,7 +14,7 @@ class MoviesApi {
   }
 
   //запрос на сервер BeatfilmMoviesApi
-  search() {
+  getMovies() {
     return fetch(this._url, {
       headers: this._headers,
     }).then(this._requestHandler);

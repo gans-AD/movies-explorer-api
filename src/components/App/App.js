@@ -27,6 +27,7 @@ function App() {
   const [isLoader, setIsLoader] = React.useState(false);
   const [isNavigationOpen, setNavigationOpen] = React.useState(false);
   const [loggedIn, setLoggedIn] = React.useState(false);
+  const [movies, setMovies] = React.useState([]);
   /*  const [isInfoTooltip, setIsInfoTooltip] = React.useState({
       isOpen: false,
       invocation: "success",
@@ -45,28 +46,40 @@ function App() {
       })
       .catch((err) => {
         console.log(err);
-      }).finally(() => {
+      })
+      .finally(() => {
         setIsLoader(false);
       });
   };
 
-  //загружаем информацию о карточках с сервера
+  //загружаем информацию о фильмах сервера
   React.useEffect(() => {
-    moviesApi.search(()=> {
-      
-    })
-  })
+    moviesApi
+      .getMovies()
+      .then((data) => {
+        setMovies(data);
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  //поиск фильмов
+  const searhMovies = (reqName) => {
+    movies.filter (i => i.nameRU.includes(reqName))
+  };
+
+  console.log(searhMovies("Роллинг"));
 
   //проверяем наличие сохранненого токена
   //и перенаправляем в "/movies"
   React.useEffect(() => {
-
     if (location.pathname !== "/") {
       validateToken();
 
-      loggedIn ? history.push("/movies") : console.log("нужно авторизоваться")//history.push("/login");
+      loggedIn ? history.push("/movies") : console.log("нужно авторизоваться"); //history.push("/login");
     }
-
   }, [history, loggedIn, location.pathname]);
 
   React.useEffect(() => {
@@ -145,12 +158,16 @@ function App() {
             <Main />
           </Route>
           <ProtectedRoute
-            exact path="/movies"
+            exact
+            path="/movies"
             loggedIn={true}
             component={Movies}
+            movies={movies}
+            searhMovies={searhMovies}
           />
           <ProtectedRoute
-            exact path="/saved-movies"
+            exact
+            path="/saved-movies"
             loggedIn={true}
             component={SavedMovies}
           >
@@ -161,7 +178,8 @@ function App() {
             />
           </ProtectedRoute>
           <ProtectedRoute
-            exact path="/profile"
+            exact
+            path="/profile"
             loggedIn={true}
             component={Profile}
           />
